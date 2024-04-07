@@ -3,6 +3,7 @@ import { v4 } from "uuid";
 
 const initialState = {
   todo: [],
+  userAssignedTasks: [],
 };
 
 const todoSlice = createSlice({
@@ -34,8 +35,15 @@ const todoSlice = createSlice({
 
       task.status = payload.status;
     },
+
+    setUserTasks: (state, { payload }) => {
+      state.userAssignedTasks = state.todo.filter(
+        (task) => task.assignedTo === payload
+      );
+    },
   },
 });
 
-export const { addTask, removeTask, updateStatus } = todoSlice.actions;
+export const { addTask, removeTask, updateStatus, setUserTasks } =
+  todoSlice.actions;
 export default todoSlice.reducer;
