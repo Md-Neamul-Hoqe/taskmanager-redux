@@ -5,6 +5,7 @@ import Chat from "../pages/Chat";
 import Settings from "../pages/Settings";
 import Profile from "../pages/Profile";
 import Posts from "../pages/Posts";
+import AddPost from "../pages/AddPost";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,10 @@ const routes = createBrowserRouter([
       {
         index: true,
         element: <Tasks />,
+      },
+      {
+        path: "/add-post",
+        element: <AddPost />,
       },
       {
         path: "/posts",
