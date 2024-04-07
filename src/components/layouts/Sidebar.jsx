@@ -3,10 +3,11 @@ import {
   Cog6ToothIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   UserCircleIcon,
-} from '@heroicons/react/24/solid';
+  ListBulletIcon,
+} from "@heroicons/react/24/solid";
 
-import logo from '../../assets/image/logo.png';
-import { NavLink } from 'react-router-dom';
+import logo from "../../assets/image/logo.png";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -17,40 +18,45 @@ const Sidebar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? 'p-2 rounded-2xl bg-primary text-white cursor-pointer'
-              : 'p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all'
-          }
-        >
+              ? "p-2 rounded-2xl bg-primary text-white cursor-pointer"
+              : "p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all"
+          }>
           <SquaresPlusIcon className="h-7 w-7 group-hover:text-white" />
         </NavLink>
         <NavLink
           to="/chat"
           className={({ isActive }) =>
             isActive
-              ? 'p-2 rounded-2xl bg-primary text-white cursor-pointer'
-              : 'p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all'
-          }
-        >
+              ? "p-2 rounded-2xl bg-primary text-white cursor-pointer"
+              : "p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all"
+          }>
           <ChatBubbleOvalLeftEllipsisIcon className="h-7 w-7 group-hover:text-white " />
+        </NavLink>
+        <NavLink
+          to="/posts"
+          className={({ isActive }) =>
+            isActive
+              ? "p-2 rounded-2xl bg-primary text-white cursor-pointer"
+              : "p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all"
+          }>
+          <ListBulletIcon className="h-7 w-7 group-hover:text-white " />
         </NavLink>
         <NavLink
           to="/settings"
           className={({ isActive }) =>
             isActive
-              ? 'p-2 rounded-2xl bg-primary text-white cursor-pointer'
-              : 'p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all'
-          }
-        >
+              ? "p-2 rounded-2xl bg-primary text-white cursor-pointer"
+              : "p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all"
+          }>
           <Cog6ToothIcon className="h-7 w-7 group-hover:text-white " />
         </NavLink>
         <NavLink
           to="/profile"
           className={({ isActive }) =>
             isActive
-              ? 'p-2 rounded-2xl bg-primary text-white cursor-pointer mt-auto'
-              : 'p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all  mt-auto'
-          }
-        >
+              ? "p-2 rounded-2xl bg-primary text-white cursor-pointer mt-auto"
+              : "p-2 rounded-2xl group hover:bg-primary text-secondary/40 cursor-pointer transition-all  mt-auto"
+          }>
           <UserCircleIcon className="h-7 w-7 group-hover:text-white " />
         </NavLink>
       </div>
