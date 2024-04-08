@@ -6,7 +6,11 @@ const TaskCard = ({ task }) => {
   const dispatch = useDispatch();
 
   const updatedStatus =
-    task?.status === "pending" ? "in-progress" : "completed";
+    task?.status === "pending"
+      ? "in-progress"
+      : task?.status === "in-progress"
+      ? "completed"
+      : "archive";
 
   return (
     <div className="bg-secondary/10 rounded-md p-5">

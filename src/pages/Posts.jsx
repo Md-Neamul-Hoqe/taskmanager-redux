@@ -12,7 +12,7 @@ const Posts = () => {
   return (
     <div>
       <h1 className="text-5xl my-10 text-center capitalize">All posts here</h1>
-      <div className="flex max-lg:flex-col gap-6 w-full mx-5">
+      <div className="flex max-lg:flex-col-reverse gap-6 w-full mx-5">
         <div className="flex-1">
           {error ? (
             <p className="text-xl text-red-500 font-mono">
@@ -28,6 +28,7 @@ const Posts = () => {
             </div>
           ) : null}
         </div>
+        <hr className="lg:hidden border-cyan-600 border-4 border-double border-separate" />
         <div className="flex-1">
           {postError ? (
             <p className="text-xl text-red-500 font-mono">

@@ -2,7 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 import { v4 } from "uuid";
 
 const initialState = {
-  todo: [],
+  todo: [
+    {
+      _id: 1,
+      status: "pending",
+      title: "Remove Button",
+      description:
+        "We need a remove button in our task card. Make the button red and use Hero-icon for trash-bin icon.",
+      date: "2023-08-28",
+      assignedTo: "Md. Neamul Hoqe",
+      priority: "high",
+    },
+  ],
   userAssignedTasks: [],
 };
 
@@ -38,7 +49,7 @@ const todoSlice = createSlice({
 
     setUserTasks: (state, { payload }) => {
       state.userAssignedTasks = state.todo.filter(
-        (task) => task.assignedTo === payload
+        (task) => task.assignedTo === payload && task.status !== "archive"
       );
     },
   },

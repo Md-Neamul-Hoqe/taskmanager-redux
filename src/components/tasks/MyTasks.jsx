@@ -6,8 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import MyTaskModal from "./MyTaskModal";
 import { useEffect, useState } from "react";
 import { setUserTasks, updateStatus } from "../../redux/features/todoSlice";
-// import { useEffect } from "react";
-// import { updateTasks } from "../../redux/features/userSlice";
 
 const MyTasks = () => {
   const [isOpen, setIsOpen] = useState(false);

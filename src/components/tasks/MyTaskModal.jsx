@@ -1,8 +1,6 @@
 import Modal from "../ui/Modal";
 
 const MyTaskModal = ({ isOpen, setIsOpen, task }) => {
-  console.log(isOpen, setIsOpen, task);
-
   const closeModal = () => {
     setIsOpen(false);
   };
