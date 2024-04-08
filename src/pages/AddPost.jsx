@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useSetPostMutation } from "../redux/features/postApi";
+import { useSetPostMutation } from "../redux/features/postInjectEndPointsApi";
 
 const AddPost = () => {
   const [setPost, { isError, error, isLoading, isSuccess, data: thePost }] =

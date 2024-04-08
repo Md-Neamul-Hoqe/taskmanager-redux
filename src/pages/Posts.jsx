@@ -1,5 +1,5 @@
-import Post from "../components/posts/post";
-import { useGetPostQuery, useGetPostsQuery } from "../redux/features/postApi";
+import Post from "../components/posts/Post";
+import { useGetPostQuery, useGetPostsQuery } from "../redux/features/postInjectEndPointsApi";
 
 const Posts = () => {
   const { data: posts, isLoading, error } = useGetPostsQuery();
@@ -16,7 +16,7 @@ const Posts = () => {
         <div className="flex-1">
           {error ? (
             <p className="text-xl text-red-500 font-mono">
-              {error.status}: Oh! Something wrong.
+              {error?.status}: Oh! Something wrong.
             </p>
           ) : isLoading ? (
             <h1 className="text-5xl text-center">Data Loading...</h1>
@@ -32,7 +32,7 @@ const Posts = () => {
         <div className="flex-1">
           {postError ? (
             <p className="text-xl text-red-500 font-mono">
-              {error.status}: Oh! Something wrong.
+              {error?.status}: Oh! Something wrong.
             </p>
           ) : isLoadingPost ? (
             <h1 className="text-5xl text-center">Data Loading...</h1>

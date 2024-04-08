@@ -9,6 +9,7 @@ import MenuDropdown from "../components/ui/MenuDropdown";
 const Tasks = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { todo } = useSelector((state) => state.tasks);
+  /* TODO: manage database to persistent storage for tasks */
 
   const pending = todo.filter((item) => item.status === "pending");
   const inProgress = todo.filter((item) => item.status === "in-progress");
